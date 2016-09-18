@@ -1,0 +1,43 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+“And how many hours would you require to implement and debug that C program?” 
+“And who better understands the Unix-nature?” Master Foo asked. 
+asked Nubi.
+Copyright © 2003 Eric S. Raymond
+“How can this be? C is the language in which the very kernel 
+Implemented in pure C, would it not span ten thousand lines?”
+in one line of shell script than there is in ten thousand lines of C.”
+in one line of shell script than there is in ten thousand lines of C.”
+“Is it he who writes the ten thousand lines, or he who, perceiving 
+lines of C.”
+“Many,” admitted the visiting programmer. “But only a fool would spend 
+Master Foo and the Ten Thousand Lines
+Master Foo once said to a visiting programmer: “There is more Unix-nature 
+Master Foo replied: “All that you say is true. But there is still more 
+Master Foo replied: “That is so. Nevertheless, there is more Unix-nature 
+nodded to his student Nubi, who wrote a line of shell script on a nearby 
+of Unix is implemented!”
+the emptiness of the task, gains merit by not coding?”
+The programmer grew distressed. “But through the C language we become as one
+The programmer muttered through his beard, contemplating what Nubi had 
+The programmer scoffed at Master Foo and rose to depart. But Master Foo 
+The programmer, who was very proud of his mastery of C, said: 
+the time to do that when so many more worthy tasks await him.”
+Unix-nature in one line of shell script than there is in ten thousand 
+Upon hearing this, the programmer was enlightened.
+whiteboard, and said: “Master programmer, consider this pipeline. 
+with the operating system and the machine, reaping matchless performance!”
+written. Finally he agreed that it was so.
