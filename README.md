@@ -14,8 +14,8 @@ In this course we want to establish a productive enviroment in scientific progra
 *Afternoon*
 
  - Basic Bash
-   - [Ex 1](https://github.com/sissa/scientific_programming_environment/blob/master/basic_bash/ex1.md)
-   - [Ex 2](https://github.com/sissa/scientific_programming_environment/blob/master/basic_bash/ex2.md)
+   - [Ex 1](https://github.com/sissa/spe_seed/blob/master/basic_bash/ex1.md)
+   - [Ex 2](https://github.com/sissa/spe_seed/blob/master/basic_bash/ex2.md)
  - Create a simple bash script.
  - Local action using `git`.
    - `git init`
@@ -30,14 +30,14 @@ In this course we want to establish a productive enviroment in scientific progra
 
  - Version Control System and `git`.
  - Local VCS Features:
-   - [Initialise](https://github.com/sissa/scientific_programming_environment/blob/master/basic_git/initialize.md) 
-   - [Branching](https://github.com/sissa/scientific_programming_environment/blob/master/basic_git/branching.md)
-   - [Merging, conflicts.](https://github.com/sissa/scientific_programming_environment/blob/master/basic_git/merging.md)
+   - [Initialise](https://github.com/sissa/spe_seed/blob/master/basic_git/initialize.md) 
+   - [Branching](https://github.com/sissa/spe_seed/blob/master/basic_git/branching.md)
+   - [Merging, conflicts.](https://github.com/sissa/spe_seed/blob/master/basic_git/merging.md)
 
 *Afternoon*
 
  - Distributed VCS Features:
-   - [Managing remotes](https://github.com/sissa/scientific_programming_environment/blob/master/basic_git/github.md).
+   - [Managing remotes](https://github.com/sissa/spe_seed/blob/master/basic_git/github.md).
  - Python pills, I want to use python to create a micro collaborative project.
    - Create a 3d graph with python.
  - Couple students two by two:
