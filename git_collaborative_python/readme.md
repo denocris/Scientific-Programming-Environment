@@ -6,7 +6,7 @@ When `AStudent` works `Bstudent` controls and vice versa.
 
 ## What's a Remote?
 
-![some text](./figures/manage_remotes.png)
+![some text](./figures/manage_remotes.png)  
 
 ## The Template Code
 
