@@ -4,6 +4,10 @@ First of all, choose who is `AStudent` and who is `BStudent`.
 
 When `AStudent` works `Bstudent` controls and vice versa.
 
+## What's a Remote?
+
+![some text](./figures/manage_remotes.png)
+
 ## The Template Code
 
 ```
