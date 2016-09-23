@@ -25,4 +25,4 @@ We will follow together the evolution of the story :)
 
 Finally, we will clean the history of the collaborative project you did.
 
-Elliot's addition of a modificiation
+Elliot's addition of a modification
