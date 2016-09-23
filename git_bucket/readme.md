@@ -5,6 +5,8 @@ The purpose of this hands on session is to get familiar with
 - `pull request`
 - `git rebase`
 - `managing more than one remote`
+- `git reset`
+- `organizing the commits (git rebase -i)`
 
 To to do so, each of the student must
 
@@ -20,3 +22,5 @@ inside this folder
 3. open a pull request on master branch of the sissa/spe_seed repository
 
 We will follow together the evolution of the story :)
+
+Finally, we will clean the history of the collaborative project you did.
