@@ -47,3 +47,68 @@ In this course we want to establish a productive enviroment in scientific progra
  - Couple students two by two:
    - One guy creates the function.
    - The other one creates the graphics I would check the history here and control the the two members effectively collaborated.
+
+
+## Wednesday 21 September 2016
+
+*Morning*
+
+ - Python presentation with slides.
+ - Python developing environments, your preferred editor, IDES, and, jupiter notebooks.
+
+*Afternoon*
+
+ - Python introductory notebook.
+ - Some buffer space
+
+## Thursday 22 September 2016
+
+*Morning*
+
+ - Order 1 Finite Elements on Triangles.
+   - Algorithm with no theory
+   - Assembly
+   - ...
+ - Present an example software that implements P1 Finite Elements.
+   - Organise 3-4 teams, of 3-4 people each component should write 30-40 lines.
+
+*Afternoon*
+
+ - Develop
+
+## Friday 23 September 2016
+
+*Morning*
+
+ - Develop
+
+## Monday 26 September 2016
+
+*Morning*
+
+ - Compiled Languages.
+ - My first C code.
+ - My first C++ code.
+ - My first Fortran code.
+
+*Afternoon*
+
+ - Hands on coding.
+
+## Tuesday 27 September 2016
+
+*Morning*
+
+ - [Intro on data structures.](https://github.com/sissa/scientific_programming_environment/tree/master/data_structures)
+    - Pointers in C
+      - [Intro](https://github.com/sissa/scientific_programming_environment/blob/master/data_structures/playing_with_pointers.md)
+      - [Pointers and References](https://github.com/sissa/scientific_programming_environment/blob/master/data_structures/pointers_and_references.md)
+    - Pointers C++, fortran.
+ - Intro to Memory Management
+    - [Heap vs Stack](https://github.com/sissa/scientific_programming_environment/blob/master/data_structures/heap_vs_stack_memory.md) 
+    - [Arrays C](https://github.com/sissa/scientific_programming_environment/blob/master/data_structures/pointers_and_arrays.md)
+    - Arrays, C++, fortran.
+
+*Afternoon*
+
+ - Matrix Vector Multiplication C, C++, fortran
