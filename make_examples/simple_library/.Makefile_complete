@@ -1,0 +1,26 @@
+CC=gcc
+CFLAGS=-I.
+DEPS=$(wildcard *.h)
+SRCS=$(wildcard *.c)
+OBJS=$(SRCS:.c=.o)
+TARGET=mylib
+
+all: $(TARGET)
+
+
+%.o: %.c $(DEPS)
+	$(CC) -c $< $(CFLAGS)
+
+
+$(TARGET): $(OBJS)
+	@echo "$^"
+	$(CC) -o $@ $(OBJS)
+
+
+clean:
+	$(info ********** cleaning up *********)
+	@rm -f *~ *.o $(TARGET) > /dev/null 2>&1
+
+
+.PHONY: clean
+

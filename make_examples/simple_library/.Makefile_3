@@ -1,0 +1,11 @@
+CC=gcc
+CFLAGS=-I.
+
+mylib: main.o print.o print.h
+	gcc -o mylib main.o print.o -I.
+
+clean:
+	rm -rf *.o *~ mylib
+
+# try to modify a .c file and recompile the library
+
