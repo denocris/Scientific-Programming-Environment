@@ -29,7 +29,7 @@ In my opinion useful functions for the matrix are:
 ```c
 void allocate_m(matrix_t *mat, unsigned int m, unsigned int n);
 
-void assign_m(matrix_t *mat, double offset){
+void assign_m(matrix_t *mat){
 Mij = n*i + j;
 }
 
@@ -50,7 +50,7 @@ In my opinion useful functions for the vector are:
 ```c
 void allocate_v(vector_t *vec, unsigned int m);
 
-void assign_v(vector_t *vec, double offset);
+void assign_v(vector_t *vec);
 
 void assign_i(const unsigned int  i, const double val, vector_t *vec);
 
