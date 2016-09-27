@@ -95,3 +95,25 @@ void arraytest(int *a)
     a[0]=a[0]-a[1];
 }
 ```
+
+## Heap vs Stack
+
+You can create an array of objects on the stack† via:
+
+```c
+myarray stackArray[100]; // 100 objects
+```
+
+And on the heap† (or "freestore"):
+
+```c
+myarray* heapArray = new myarray[100];
+delete [] heapArray; // when you're done
+```
+But it's best not manage memory yourself. Instead, use a std::vector:
+
+```c
+#include <vector>
+std::vector<myarray> bestArray(100);
+```
+A vector is a dynamic array, which (by default) allocates elements from the heap.††
