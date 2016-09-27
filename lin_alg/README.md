@@ -1,5 +1,7 @@
 # Assignment
 
+**One Dimensional arrays are DINAMICALLY allocated!**
+
 Write the matrix vector multiplication for these two data structures:
 
 ```c
