@@ -15,7 +15,7 @@ data within  | 23 | 6f | 4a |
              +----+----+----+...
 ```
 Now suppose we create a character:
-```
+```c
 char c = 'z';  // 'z' is 7a in hex
 ```
 Further suppose `c` is stored at address `01`, so our memory looks like so:

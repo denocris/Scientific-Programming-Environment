@@ -1,7 +1,65 @@
 # Pointers and arrays
 
-We learn by mistakes: 
+We edit and explain this piece of code:
+
+```c
+#include <stdio.h>
+
+int n =10; // global variable
+
+void print_array(int *a)
+{
+    int i=0;
+
+    for (i=0 ; i < n; i+=1)
+        printf("entry %d value %d\n",i,a[i]);
+}
+
+void assign_zero_value(int* a)
+{
+    int i=0;
+
+    for (i=0 ; i < n; i+=1)
+        a[i] = 0;
+}
+
+int main()
+{
+    int * a[n]; // statically allocated array
+
+    print_array(a);
+    assign_zero_value(a);
+    print_array(a);
+
+    int * b;
+
+    b = (int*) malloc(n*sizeof(int));
+
+    assign_zero_value(b);
+    print_array(b);
+
+    free(b);
+}
 ```
+
+try to run:
+
+```
+valgrind --leak-check=yes ./array.x
+```
+
+now comment `free(b)` and try again:
+
+```
+valgrind --leak-check=yes ./array.x
+```
+
+
+
+
+We learn by mistakes: 
+
+```c
 void arraytest(int a[])
 {
     // changed the array a
@@ -27,7 +85,8 @@ memory he has to copy?". We already know the answer: he does not know.
 
 This is why the compiler substitutes the original function
 `void arraytest(int a[])` with:
-```
+
+```c
 void arraytest(int *a)
 {
     // changed the array a
