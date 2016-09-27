@@ -6,7 +6,7 @@ DEPS=$(shell find . -name '*.h')
 
 VPATH=src:src/tunnel
 
-TARGET=mylib
+TARGET=myexec
 
 
 all: setup $(TARGET)

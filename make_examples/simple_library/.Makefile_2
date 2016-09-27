@@ -1,8 +1,8 @@
-mylib: main.c print.c print.h
-	gcc -o mylib main.c print.c -I.
+myexec: main.c print.c print.h
+	gcc -o myexec main.c print.c -I.
 
 clean:
-	rm -rf *.o *~ mylib
+	rm -rf *.o *~ myexec
 
 # try to modify a .c file and recompile the library
 

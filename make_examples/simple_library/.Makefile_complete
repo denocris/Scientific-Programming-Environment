@@ -3,7 +3,7 @@ CFLAGS=-I.
 DEPS=$(wildcard *.h)
 SRCS=$(wildcard *.c)
 OBJS=$(SRCS:.c=.o)
-TARGET=mylib
+TARGET=myexec
 
 all: $(TARGET)
 

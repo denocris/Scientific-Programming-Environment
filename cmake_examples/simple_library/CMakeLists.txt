@@ -1,0 +1,4 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.4)
+
+ADD_EXECUTABLE(myexec print.c main.c)
+

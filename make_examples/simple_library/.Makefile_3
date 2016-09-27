@@ -1,11 +1,11 @@
 CC=gcc
 CFLAGS=-I.
 
-mylib: main.o print.o print.h
-	gcc -o mylib main.o print.o -I.
+myexec: main.o print.o print.h
+	gcc -o myexec main.o print.o -I.
 
 clean:
-	rm -rf *.o *~ mylib
+	rm -rf *.o *~ myexec
 
 # try to modify a .c file and recompile the library
 

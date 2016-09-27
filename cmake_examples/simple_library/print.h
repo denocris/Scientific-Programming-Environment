@@ -2,6 +2,6 @@
 #define __myexec_print_h_
 
 #include <stdio.h>
-void StructuredMakePrint();
-  
+void SimpleMakePrint();
+
 #endif
