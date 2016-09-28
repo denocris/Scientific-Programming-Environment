@@ -5,10 +5,11 @@ BUILD_DIR=build
 CC=gcc
 CFLAGS=-I$(INCLUDE_DIR)
 DEPS=$(shell find . -name '*.h')
-SRCS= $(wildcard *.c) $(wildcard $(SOURCE_DIR)/**/*.c) 
-#SRCS=$(shell find . -name '*.c')
 
-OBJS=$(addprefix $(BUILD_DIR)/,$(SRCS:.c=.o))
+SRCS=$(wildcard *.c) $(wildcard $(SOURCE_DIR)/**/*.c)
+
+OBJS=$(addprefix $(BUILD_DIR)/,$(SRCS: .c=.o))
+
 
 TARGET=mylib
 
@@ -33,6 +34,7 @@ $(BUILD_DIR)/%.o: %.c $(DEPS)
 	$(CC) -c $< $(CFLAGS) -o $@ 
 
 
+
 $(TARGET): $(OBJS)
 	@echo "$^"
 	$(CC) $(CFLAGS) $^ -o $@
@@ -48,4 +50,3 @@ clean:
 
 
 .PHONY: clean
-

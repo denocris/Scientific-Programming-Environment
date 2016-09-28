@@ -7,7 +7,7 @@ TARGET=myexec
 
 
 all: info $(TARGET)
-					$(info I am going to compile)
+					$(info You are ready to execute!!)
 
 .PHONY: info
 

@@ -3,5 +3,5 @@
 
 #include <stdio.h>
 void SimpleMakePrint();
-  
+
 #endif

@@ -1,6 +1,6 @@
 #include<stdio.h>
 
-void foo()
+int main()
 {
     printf("Ciao Bello\n");
 }
