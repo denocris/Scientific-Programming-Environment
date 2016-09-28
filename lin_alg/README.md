@@ -1,4 +1,4 @@
-# Assignment
+# Implpementation Assignment
 
 **One Dimensional arrays are DINAMICALLY allocated!**
 
@@ -77,5 +77,19 @@ void scale(vector_t *a_in, double val);
 void a_equals_a_minus_alpha_b(vector_t *a_in, vector_t *b_in, double alpha);
 
 void a_equals_a_plus_alpha_b(vector_t *a_in, vector_t *b_in, double alpha);
-
 ```
+
+# Configuration Assignment
+
+*Minimal:*
+
+ - Split implementation and declaration for the functions you created into `.c` files and `.h` files.
+ - Write a simple `Makefile` to compile your library and and a main file that tests the functionalities you implemented.
+ 
+*(Optional)*
+
+ - Oganize the library in diffferent folders: `include` and `src`.
+ 
+ *(Just in case...)* a very much appriciated case actually...
+ 
+ - Use `cmake` to configure your libray.
