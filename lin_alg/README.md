@@ -90,6 +90,6 @@ void a_equals_a_plus_alpha_b(vector_t *a_in, vector_t *b_in, double alpha);
 
  - Oganize the library in diffferent folders: `include` and `src`.
  
- *(Just in case...)* a very much appriciated case actually...
+*(Just in case...)* a very much appriciated case actually...
  
  - Use `cmake` to configure your libray.
