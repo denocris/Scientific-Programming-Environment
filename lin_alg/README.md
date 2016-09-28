@@ -50,12 +50,32 @@ In my opinion useful functions for the vector are:
 ```c
 void allocate_v(vector_t *vec, unsigned int m);
 
-void assign_v(vector_t *vec);
+void assign_v(vector_t *vec, double value);
 
 void assign_i(const unsigned int  i, const double val, vector_t *vec);
 
+double sum_prod(vector_t *a_in, vector_t *b_in){
+sum += v_i * w_i}
+
 void assign_zero_v(vector_t *vec);
 
+void prod(vector_t *a_in, vector_t *b_in, vector_t *c_out){
+c_i = a_i * b_i}
+
+void diff(vector_t *a_in, vector_t *b_in, vector_t *c_out);
+// c_out = a_in - b_in
+
+void dump_b_into_a(vector_t *a_in, vector_t *b_in);
+// a_in <- b_in
+
 void deallocate_v(vector_t *vec);
+
+void print_v(vector_t *vec);
+
+void scale(vector_t *a_in, double val);
+
+void a_equals_a_minus_alpha_b(vector_t *a_in, vector_t *b_in, double alpha);
+
+void a_equals_a_plus_alpha_b(vector_t *a_in, vector_t *b_in, double alpha);
 
 ```
