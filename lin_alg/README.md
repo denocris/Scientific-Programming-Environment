@@ -1,6 +1,20 @@
-# Implpementation Assignment
+# Linear Algebra References
 
-**One Dimensional arrays are DINAMICALLY allocated!**
+[Douglas N. Arnold Lecture Notes](https://www.ima.umn.edu/~arnold/8445-8446.14-15/notes.pdf)
+
+[THE LINEAR ALGEBRA BOOK!](http://bookstore.siam.org/ot50/)
+
+[Do you feel bad if I tell you that there's a lod of good material on the Conjugate Gradient Wikipedia Page?](https://en.wikipedia.org/wiki/Conjugate_gradient_method)
+
+## Linear Algebra Assignemnt
+
+Develop the interface `solver.h` and the implementation `solver.c`. Use the developed library to implenet the conjugate gradient algorithm to solve a test linear system.
+
+![cg_algorithm](https://wikimedia.org/api/rest_v1/media/math/render/svg/e300dfefdbd374cdee765397528a65a5736a50d3)
+
+# Implementation Assignment
+
+**One Dimensional arrays are DYNAMICALLY allocated!**
 
 Write the matrix vector multiplication for these two data structures:
 
