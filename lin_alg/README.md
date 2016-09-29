@@ -12,6 +12,12 @@ Develop the interface `solver.h` and the implementation `solver.c`. Use the deve
 
 ![cg_algorithm](https://wikimedia.org/api/rest_v1/media/math/render/svg/e300dfefdbd374cdee765397528a65a5736a50d3)
 
+The interface for `solver.h` is extremely sophisticated:
+
+```
+void conjugate_gradient(matrix_t *a, vector_t *x, vector_t *b);
+```
+
 # Implementation Assignment
 
 **One Dimensional arrays are DYNAMICALLY allocated!**
