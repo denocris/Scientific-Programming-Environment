@@ -47,12 +47,21 @@ double scalar_prod(vector_t* v1,vector_t* v2)
   return scalarp;
 }
 
-void sum_two_vectors(vector_t* v1,vector_t* v2,vector_t* v_out)
+void sum_two_vectors(vector_t* v1,vector_t* v2,vector_t* v_sum,double coeff)
 {
   int k;
   for (k = 0; k < (v1->size); k++)
   {
-    v_out->data[k] = v1->data[k] + v2->data[k];
+    v_sum->data[k] = v1->data[k] + coeff*v2->data[k];
+  }
+}
+
+void diff_two_vectors(vector_t* v1,vector_t* v2,vector_t* v_diff,double coeff)
+{
+  int k;
+  for (k = 0; k < (v1->size); k++)
+  {
+    v_diff->data[k] = v1->data[k] - coeff*v2->data[k];
   }
 }
 

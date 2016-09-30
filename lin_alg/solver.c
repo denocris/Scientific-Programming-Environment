@@ -19,11 +19,10 @@ double compute_alpha(matrix_t* mat, vector_t* r0, vector_t* p0)
   alpha = num / den;
 
   deallocate_v(&Ap0);
+  //printf("num = %e\n", num);
+  //printf("den = %e\n", den);
 
-  printf("num = %e\n", num);
-  printf("den = %e\n", den);
-
-  printf("alpha = %e\n", alpha);
+  //printf("alpha = %e\n", alpha);
   return alpha;
 
 }
@@ -59,6 +58,8 @@ vector_t conj_grad_method(matrix_t* mat, vector_t* b)
 
   multiply_mat_vect(mat, &x0, &Ax0);
 
+// Let's start
+
   int i;
   for (i = 0; i < mat->row; i++){
 
@@ -71,6 +72,8 @@ vector_t conj_grad_method(matrix_t* mat, vector_t* b)
   }
 
 
+// In this for the method is implemented
+
   int k;
   for (k = 0; k < mat->row; k++){
 
@@ -80,30 +83,37 @@ vector_t conj_grad_method(matrix_t* mat, vector_t* b)
 
     v1_equal_v2(&r_old,&r0);
 
-    //double beta = scalar_prod(&r0,&r0) / scalar_prod(&r_old,&r_old);
+    sum_two_vectors(&x_solution,&p0,&x_solution,alpha);  // x_{k+1} = x_{k} + alpha_k * p_{k}
+
+    diff_two_vectors(&r0,&Ap0,&r0,alpha); // r_{k+1} = r_{k} - alpha_k * A p_{k}
+
+    double rr_small = scalar_prod(&r0,&r0);
+
+    if (rr_small < 0.000000001){break;}
+
+    double beta = scalar_prod(&r0,&r0) / scalar_prod(&r_old,&r_old);
+
+    sum_two_vectors(&r0,&p0,&p0,beta); // p_{k+1} = r_{k+1} + beta_k * p_{k}
 
 
+// Old version:
+
+/*
     int j;
     for (j = 0; j < x0.size; j++)
         {
 
-          double elem_x;
-          elem_x = x_solution.data[j] + alpha*p0.data[j];
-          assign_i(j,elem_x,&x_solution);
+          //double elem_x;
+          //elem_x = x_solution.data[j] + alpha*p0.data[j];
+          //assign_i(j,elem_x,&x_solution);
 
-          double elem_r;
-          elem_r = r0.data[j] - alpha*Ap0.data[j];
-          assign_i(j,elem_r,&r0);
+          //double elem_r;
+          //elem_r = r0.data[j] - alpha*Ap0.data[j];
+          //assign_i(j,elem_r,&r0);
 
-          double rr_small = scalar_prod(&r0,&r0);
+        }*/
 
-    if (rr_small < 0.000000001){
-          break;
-        }}
-
-    double beta = scalar_prod(&r0,&r0) / scalar_prod(&r_old,&r_old);
-
-
+    /*int j;
     for (j = 0; j < x0.size; j++)
             {
 
@@ -111,7 +121,7 @@ vector_t conj_grad_method(matrix_t* mat, vector_t* b)
           elem_p = r0.data[j] + beta*p0.data[j];
           assign_i(j,elem_p,&p0);
 
-        }
+        }*/
 
   }
 
