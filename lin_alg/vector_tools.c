@@ -1,10 +1,13 @@
 #include "vector_tools.h"
+#include <assert.h>
 
 void allocate_v(vector_t *vect, unsigned int k)
 {
   vect->size=k;
 
   vect->data = (double *)malloc(k*sizeof(double));
+
+  assert(vect->data != NULL && "No allocated vector");
 }
 
 void assign_zero_v(vector_t *vect)

@@ -4,7 +4,7 @@
 #include "solver.h"
 #include <assert.h>
 
-int main()
+int main(int argc, char ** argv)
 {
   printf("-------------------------------------------------------------------------- \n");
   printf("This code implements the Conjugate Gradient Method \n to solve the linear system A x = b and find out the vector x\n");
@@ -15,14 +15,15 @@ int main()
   vector_t my_vect_b; // is the vector b
   //vector_t my_vect_out;
 
-
 // In this example our matrix A will be 2 x 2
-  int r = 2; // matrix row
-  int c = 2; // matrix column
+  int r = atoi(argv[1]); // matrix row
+  int c = atoi(argv[2]); // matrix column
+
+  assert(argc==3 && "It just need rows and columns");
 
   int k = c; // vector size
 
-  assert(r==c);
+  assert(r==c && "This code supports only square matrices");
 
 // We allocate space for our objects
   allocate_m(&my_mat,r,c);
