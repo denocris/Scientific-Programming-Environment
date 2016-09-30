@@ -18,6 +18,14 @@ void assign_zero_v(vector_t *vect);
 void assign_i(const unsigned int i,
                const double elem, vector_t *vect);
 
+void v1_equal_v2(vector_t *vect1,vector_t *vect2);
+
+void sum_two_vectors(vector_t* v1,vector_t* v2,vector_t* v_out);
+
+double scalar_prod(vector_t* v1,vector_t* v2);
+
 void deallocate_v(vector_t *vect);
+
+
 
 #endif

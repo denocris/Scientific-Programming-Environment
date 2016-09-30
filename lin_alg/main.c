@@ -1,8 +1,7 @@
 #include "matrix_tools.h"
 #include "vector_tools.h"
 #include "mat_vect_multy.h"
-
-
+#include "solver.h"
 
 int main()
 {
@@ -11,7 +10,7 @@ int main()
   vector_t my_vect_out;
 
   int r = 2;
-  int c = 3;
+  int c = 2;
 
   int k = c;
 
@@ -21,37 +20,45 @@ int main()
   assign_zero_m(&my_mat);
   assign_zero_v(&my_vect);
 
-  int i;
-  int j;
-  int elem_m;
-  for (i = 0; i < my_mat.row; i++)
-      for (j = 0; j < my_mat.col; j++)
-      {
-        elem_m = i+j;
-        assign_ij(i,j,elem_m,&my_mat);
-        //printf("M[%d,%d] = %e\n",i,j,assign_ij(i,j,elem,&my_mat));
-      }
-/*
-  printf("my_mat[%d,%d] = %e\n",0,0,my_mat.data[0]);
-  printf("my_mat[%d,%d] = %e\n",0,1,my_mat.data[1]);
-  printf("my_mat[%d,%d] = %e\n",0,2,my_mat.data[2]);
-  printf("my_mat[%d,%d] = %e\n",1,0,my_mat.data[3]);
-  printf("my_mat[%d,%d] = %e\n",1,1,my_mat.data[4]);
-  printf("my_mat[%d,%d] = %e\n",1,2,my_mat.data[5]);
-*/
-  int s;
-  int elem_v;
-  for (i = 0; i < my_vect.size; i++)
-      {
-        elem_v = i;
-        assign_i(i,elem_v,&my_vect);
-      }
+// Construct the matrix
+  assign_ij(0,0,4,&my_mat);
+  assign_ij(0,1,1,&my_mat);
+  assign_ij(1,0,1,&my_mat);
+  assign_ij(1,1,3,&my_mat);
+
+  printf("%e   ",my_mat.data[0]);
+  printf("%e\n",my_mat.data[1]);
+  printf("%e   ",my_mat.data[2]);
+  printf("%e\n",my_mat.data[3]);
+
+// Construct the vector
+  assign_i(0,1,&my_vect);
+  assign_i(1,2,&my_vect);
+
+  printf("%e\n",my_vect.data[0]);
+  printf("%e",my_vect.data[1]);
+
 
   multiply_mat_vect(&my_mat,&my_vect,&my_vect_out);
+  //sum_two_vectors(&my_vect,&my_vect2,&my_vect)
 
-  //printf("my_vect_out[%d] = %e\n",0,my_vect_out.data[0]);
-  //printf("my_vect_out[%d] = %e\n",1,my_vect_out.data[1]);
-  //printf("my_vect_out[%d] = %e\n",1,my_vect_out.data[2]);
+  int i;
+  for (i = 0; i < my_vect.size; i++)
+  {
+    printf("________ main ______ b[%d] = %e\n",i,my_vect_out.data[i]);
+  }
+
+
+  //printf("main alpha = %e \n",compute_alpha(&my_mat, &my_vect, &my_vect));
+  //printf("scalar product = %e \n",scalar_prod(&my_vect, &my_vect));
+
+  vector_t x_sol = conj_grad_method(&my_mat,&my_vect);
+
+  for (i = 0; i < my_vect.size; i++)
+  {
+    printf("________ main ______ x[%d] = %e \n",i,x_sol.data[i]);
+  }
+
 
   deallocate_m(&my_mat);
   deallocate_v(&my_vect);
